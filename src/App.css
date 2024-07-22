@@ -1,0 +1,96 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+/* App.css */
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.pomodoroTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.timerArea {
+  margin: 20px 0;
+  background-color: beige;
+  border-radius: 10px;
+}
+
+.timerDisplay {
+  font-size: 3rem;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.Start {
+  background-color: #a8d1d1;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Pause {
+  background-color: #ffd5a4;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.Reset {
+  background-color:  #fd8a8a;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: scale(0.75);
+}
