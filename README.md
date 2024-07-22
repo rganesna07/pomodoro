@@ -1,4 +1,3 @@
-Certainly! Here is a single `README.md` document that includes all the relevant information about your Pomodoro Timer project:
 
 
 # Pomodoro Timer
