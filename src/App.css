@@ -94,3 +94,30 @@ button:hover {
 button:active {
   transform: scale(0.75);
 }
+
+.cntrlTimer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cntrlBtn {
+  background-color: #add8e6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cntrlBtn:hover {
+  background-color: #6495ed;
+}
