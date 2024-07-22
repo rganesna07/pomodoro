@@ -19,11 +19,15 @@ function App() {
   const [isRunning, setRunning]= useState(false);
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
+  const [onBreak, setOnBreak] = useState(false);
+  const [workIntrvl, setWrk] = useState(0);
+  const [breakIntrvl, setBrk] = useState(0);
   
 
 
   useEffect(() => {
-    if (isRunning){
+    if (isRunning || onBreak){
+    
       const interval = setInterval(()=> {
         
         if(seconds >0){
@@ -36,11 +40,24 @@ function App() {
         }
 
         if (minutes === 0 && seconds === 0){
-          setMinutes(0)
+          
           setSeconds(0)
-          setRunning(false)
+          setMinutes(0)
           clockLoop.stop()
-          bellSound.play()
+          bellSound.play()        
+
+          if (!onBreak){
+            setMinutes(5)
+            setOnBreak(true)
+            setWrk((workIntrvl) => workIntrvl +1)
+           
+          }
+
+          if (onBreak){
+            setBrk((breakIntrvl) => breakIntrvl +1)
+            setMinutes(25)
+            setOnBreak(false) 
+          }
         }
 
       }, 1000)
@@ -48,7 +65,7 @@ function App() {
       
     }
   
-  },[isRunning, minutes, seconds])
+  },[isRunning, minutes, seconds,workIntrvl,breakIntrvl])
 
   const decrease = () => {
     if (minutes > 0){
@@ -92,8 +109,10 @@ function App() {
         <h2 className='timerDisplay'> {minutes}:{seconds < 10 ? "0" +seconds: seconds}</h2>
         <div className= 'cntrlTimer'>
           <button className='cntrlBtn' onClick={increase}> + </button>
-          <button className= 'cntrlBtn' onClick={decrease}> - </button>
-          
+          <button className= 'cntrlBtn' onClick={decrease}> - </button>  
+        </div>
+        <div className= 'cntrlTimer'>
+          <h2 className='h2'><span>Work Intervals {workIntrvl}</span>/ Breaks Completed {breakIntrvl}</h2>
         </div>
       </div>
      <div className='Buttons'>
