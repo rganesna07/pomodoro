@@ -1,72 +1,70 @@
-# Getting Started with Create React App
+Certainly! Here is a single `README.md` document that includes all the relevant information about your Pomodoro Timer project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Pomodoro Timer
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+The Pomodoro Timer is a React application that implements a Pomodoro timer with features such as start, pause, reset, increase, and decrease. It also tracks work intervals and breaks completed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Start**: Begins the Pomodoro timer.
+- **Pause**: Pauses the timer.
+- **Reset**: Resets the timer to the default 25 minutes.
+- **Increase/Decrease**: Adjusts the timer's duration.
+- **Break**: Automatically switches to a break after the Pomodoro timer ends and vice versa.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the Pomodoro Timer application, follow these steps:
 
-### `npm run build`
+1. **Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies**
 
-### `npm run eject`
+   Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed. Then, run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the Application**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   After installing the dependencies, start the development server:
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+   Open your browser and navigate to `http://localhost:3000` to view the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Running Tests
 
-### Analyzing the Bundle Size
+Unit tests for the Pomodoro Timer are managed via GitHub Actions. They are automatically run on every push to the `main` branch or when a pull request is created.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run tests locally, you can use:
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm test
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This command will run all the unit tests using Jest.
 
-### Deployment
+## CI/CD
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project uses [GitHub Actions] for continuous integration and continuous deployment (CI/CD). The workflow is configured to automatically run tests using the `.github/workflows/ci.yml` configuration file.
 
-### `npm run build` fails to minify
+### Workflow Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# pomodoro
-# pomodoro
+The GitHub Actions workflow performs the following steps:
+
+- Checks out the code from the repository.
+- Sets up the Node.js environment.
+- Installs dependencies.
+- Runs the tests with `npm test`.
+
+
