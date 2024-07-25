@@ -20,7 +20,7 @@ To get started with the Pomodoro Timer application, follow these steps:
 
 1. **Clone the Repository**
 
-   git clone https://github.com/rganesna07/your-repository.git
+   git clone https://github.com/rganesna07/pomodoro.git
    cd your-repository
 
 
